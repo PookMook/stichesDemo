@@ -1,6 +1,6 @@
 import { createCss } from "@stitches/react"
 
-export const { styled, getCssString, keyframes } = createCss({
+export const { styled, getCssString, keyframes, global } = createCss({
   theme: {
     colors: {
       primary: "blue",
@@ -21,5 +21,12 @@ export const { styled, getCssString, keyframes } = createCss({
       icon_largeExtra: "$fontSizes$largeExtra",
       icon_banner: "$fontSizes$banner",
     },
+  },
+})
+
+export const globalStyles = global({
+  body: {
+    margin: 0,
+    boxSizing: "border-box",
   },
 })

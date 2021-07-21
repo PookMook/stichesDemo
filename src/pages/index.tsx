@@ -1,26 +1,16 @@
 import { ReactElement } from "react"
-import { TemplateIcon } from "ui/icons"
-import { Users } from "components/users/user"
-import { Wrapper } from "components/wrapper"
-import Link from "next/link"
+import { Slide } from "ui/slide"
+import { useNavigation } from "hooks/useNavigation"
+import { Text } from "ui/text"
 
 export default function IndexPage(): ReactElement {
+  useNavigation("presentation/1", null)
+
   return (
-    <>
-      <h1>Hello World</h1>
-      <TemplateIcon Spin Size="banner" Stroke="bold" />
-      <Users />
-      <Link href="/">
-        <a>Index (shared state A)</a>
-      </Link>
-      <Link href="/second">
-        <a>Second (shared state A)</a>
-      </Link>
-      <Link href="/third">
-        <a>third (shared State B)</a>
-      </Link>
-    </>
+    <Slide>
+      <Text Size="Tagline" as="h1">
+        Stitches.js Presentation
+      </Text>
+    </Slide>
   )
 }
-
-IndexPage.extra = Wrapper
