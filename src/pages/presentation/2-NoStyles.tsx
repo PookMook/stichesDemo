@@ -3,9 +3,12 @@ import { Slide } from "ui/slide"
 import { nbsp, Text } from "ui/text"
 
 export default function PresentationPage(): JSX.Element {
-  useNavigation("/presentation/3-TailwindCSS", "/presentation/1-whatUIDS")
+  const variants = useNavigation({
+    right: "/presentation/3-TailwindCSS",
+    left: "/presentation/1-whatUIDS",
+  })
   return (
-    <Slide as="div" Disposition="Titled">
+    <Slide as="div" Disposition="Titled" {...variants}>
       <Text as="h2">
         Example of UI{nbsp}Design{nbsp}System: No{nbsp}Styles{nbsp}/{nbsp}&quot;Pure{nbsp}HTML&quot;
       </Text>
@@ -51,37 +54,37 @@ export default function PresentationPage(): JSX.Element {
             <div>
               Checkboxes:
               <label>
-                A<input type="checkbox" />
+                <input type="checkbox" />A
               </label>
               <label>
-                B<input type="checkbox" />
+                <input type="checkbox" />B
               </label>
               <label>
-                C<input type="checkbox" />
+                <input type="checkbox" />C
               </label>
               <label>
-                D<input type="checkbox" />
+                <input type="checkbox" />D
               </label>
               <label>
-                E<input type="checkbox" />
+                <input type="checkbox" />E
               </label>
             </div>
             <div>
               Radio:
               <label>
-                A<input type="radio" name="radio" />
+                <input type="radio" name="radio" />A
               </label>
               <label>
-                B<input type="radio" name="radio" />
+                <input type="radio" name="radio" />B
               </label>
               <label>
-                C<input type="radio" name="radio" />
+                <input type="radio" name="radio" />C
               </label>
               <label>
-                D<input type="radio" name="radio" />
+                <input type="radio" name="radio" />D
               </label>
               <label>
-                E<input type="radio" name="radio" />
+                <input type="radio" name="radio" />E
               </label>
             </div>
           </fieldset>

@@ -3,9 +3,9 @@ import { Slide } from "ui/slide"
 import { nbsp, Text } from "ui/text"
 
 export default function PresentationPage(): JSX.Element {
-  useNavigation("/presentation/2-NoStyles", "/")
+  const variants = useNavigation({ right: "/presentation/2-NoStyles", left: "/" })
   return (
-    <Slide>
+    <Slide {...variants}>
       <Text as="h2">
         Before{nbsp}we{nbsp}start, what&apos;s a UI{nbsp}Design{nbsp}System?
       </Text>

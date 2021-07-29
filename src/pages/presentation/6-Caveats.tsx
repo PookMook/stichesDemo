@@ -3,9 +3,12 @@ import { Slide } from "ui/slide"
 import { Text } from "ui/text"
 
 export default function PresentationPage(): JSX.Element {
-  useNavigation("/presentation/7-Basics", "/presentation/5-Stitches")
+  const variants = useNavigation({
+    right: "/presentation/7-Basics",
+    left: "/presentation/5-Stitches",
+  })
   return (
-    <Slide>
+    <Slide {...variants}>
       <Text as="h2">Template</Text>
       <ul>
         <Text as="li"></Text>

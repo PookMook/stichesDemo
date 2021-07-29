@@ -1,4 +1,4 @@
-import { styled } from "./stitches.config"
+import { styled, theme } from "./stitches.config"
 import { Text } from "./text"
 
 export const Slide = styled("article", {
@@ -15,6 +15,59 @@ export const Slide = styled("article", {
       Titled: {
         gridTemplate: `"title" auto
         "main" 1fr / 1fr`,
+      },
+    },
+    up: {
+      true: {
+        "div.vertical:before": {
+          content: "▲",
+          fontSize: "$largeExtra",
+          position: "absolute",
+          top: theme.sizes.medium,
+          color: "$greyed",
+          filter: "blur(8px)",
+        },
+      },
+    },
+    right: {
+      true: {
+        "&::after": {
+          content: "▶",
+          fontSize: "$largeExtra",
+          position: "absolute",
+          right: theme.sizes.medium,
+          color: "$greyed",
+          filter: "blur(8px)",
+        },
+      },
+    },
+    left: {
+      true: {
+        "&:before": {
+          content: "◀",
+          fontSize: "$largeExtra",
+          position: "absolute",
+          left: theme.sizes.medium,
+          color: "$greyed",
+          filter: "blur(8px)",
+        },
+      },
+    },
+    down: {
+      true: {
+        "div.vertical": {
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+        },
+        "div.vertical:after": {
+          content: "▼",
+          fontSize: "$largeExtra",
+          position: "absolute",
+          bottom: theme.sizes.medium,
+          color: "$greyed",
+          filter: "blur(8px)",
+        },
       },
     },
   },

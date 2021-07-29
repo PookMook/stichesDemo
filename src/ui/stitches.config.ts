@@ -1,4 +1,5 @@
 import { createCss, defaultThemeMap } from "@stitches/react"
+import { plum, plumDark } from "@radix-ui/colors"
 
 function calculateScale(step: number, unit = "rem"): string {
   // Static config
@@ -12,7 +13,9 @@ function calculateScale(step: number, unit = "rem"): string {
 export const { styled, getCssString, keyframes, global, theme } = createCss({
   theme: {
     colors: {
-      primary: "blue",
+      ...plum,
+      primary: "$plum12",
+      greyed: "$plum6",
     },
     fontSizes: {
       halfScreen: "50%",
@@ -34,6 +37,9 @@ export const { styled, getCssString, keyframes, global, theme } = createCss({
       title: calculateScale(3),
       banner: calculateScale(4),
     },
+    fonts: {
+      default: "sans-serif",
+    },
   },
   media: {
     tablet: "(min-width: 520px)",
@@ -53,12 +59,18 @@ export const ScreenShareTheme = theme("streaming", {
     halfScreen: "75%",
     clientSize: "200%",
   },
+  colors: {
+    ...plumDark,
+    primary: "$plum12",
+    greyed: "$plum6",
+  },
 })
 
 export const globalStyles = global({
   "*": {
     boxSizing: "border-box",
     position: "relative",
+    fontFamily: "$default",
   },
   html: {
     fontSize: "$halfScreen",
@@ -69,5 +81,7 @@ export const globalStyles = global({
   body: {
     margin: 0,
     boxSizing: "border-box",
+    backgroundColor: "$plum1",
+    color: "$plum12",
   },
 })
