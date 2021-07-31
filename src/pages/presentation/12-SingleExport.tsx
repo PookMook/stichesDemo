@@ -4,16 +4,16 @@ import { Text } from "ui/text"
 
 export default function PresentationPage(): JSX.Element {
   const variants = useNavigation({
-    right: "/presentation/13-OpenAPI",
+    right: "/presentation/13-ClosedApi",
     left: "/presentation/11-ConfigAdvanced",
   })
   return (
     <Slide {...variants}>
-      <Text as="h2">Template</Text>
+      <Text as="h2">Single Export Pattern</Text>
       <ul>
-        <Text as="li"></Text>
-        <Text as="li">Hard to maintain / upgrade</Text>
-        <Text as="li">Often ends up inconsistent over large codebases</Text>
+        <Text as="li">1 component, lots of Variants</Text>
+        <Text as="li">Central location to update</Text>
+        <Text as="li">Consistency + css escape hatch</Text>
       </ul>
     </Slide>
   )

@@ -5,15 +5,14 @@ import { Text } from "ui/text"
 export default function PresentationPage(): JSX.Element {
   const variants = useNavigation({
     right: "/presentation/15-FreeToGo",
-    left: "/presentation/13-OpenAPI",
+    left: "/presentation/13-ClosedApi",
   })
   return (
     <Slide {...variants}>
-      <Text as="h2">Template</Text>
+      <Text as="h2">Open API</Text>
       <ul>
-        <Text as="li"></Text>
-        <Text as="li">Hard to maintain / upgrade</Text>
-        <Text as="li">Often ends up inconsistent over large codebases</Text>
+        <Text as="li">Lego building blocks</Text>
+        <Text as="li">Can build a lot more stuff</Text>
       </ul>
     </Slide>
   )

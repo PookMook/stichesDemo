@@ -9,11 +9,12 @@ export default function PresentationPage(): JSX.Element {
   })
   return (
     <Slide {...variants}>
-      <Text as="h2">Template</Text>
+      <Text as="h2">more tools</Text>
       <ul>
-        <Text as="li"></Text>
-        <Text as="li">Hard to maintain / upgrade</Text>
-        <Text as="li">Often ends up inconsistent over large codebases</Text>
+        <Text as="li">utils</Text>
+        <Text as="li">Breakpoints</Text>
+        <Text as="li">theme</Text>
+        <Text as="li">global getCssString </Text>
       </ul>
     </Slide>
   )

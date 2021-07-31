@@ -5,12 +5,12 @@ import { Text } from "ui/text"
 export default function PresentationPage(): JSX.Element {
   const variants = useNavigation({ left: "/presentation/15-FreeToGo" })
   return (
-    <Slide {...variants}>
-      <Text as="h2">Template</Text>
+    <Slide {...variants} Disposition="Center">
       <ul>
-        <Text as="li"></Text>
-        <Text as="li">Hard to maintain / upgrade</Text>
-        <Text as="li">Often ends up inconsistent over large codebases</Text>
+        <Text as="li">My name is Arthur Juchereau</Text>
+        <Text as="li">Welbi is hiring engineers</Text>
+        <Text as="li">twitter @ArthurBienSur</Text>
+        <Text as="li">youtube.com/c/ArthurJuchereau</Text>
       </ul>
     </Slide>
   )

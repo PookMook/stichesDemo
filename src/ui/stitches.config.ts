@@ -38,7 +38,9 @@ export const { styled, getCssString, keyframes, global, theme } = createCss({
       banner: calculateScale(4),
     },
     fonts: {
-      default: "sans-serif",
+      default: "Circular-Book",
+      medium: "Circular-Medium",
+      black: "Circular-Black",
     },
   },
   media: {
@@ -54,15 +56,18 @@ export const { styled, getCssString, keyframes, global, theme } = createCss({
   },
 })
 
-export const ScreenShareTheme = theme("streaming", {
-  fontSizes: {
-    halfScreen: "75%",
-    clientSize: "200%",
-  },
+export const darkTheme = theme("dark", {
   colors: {
     ...plumDark,
     primary: "$plum12",
     greyed: "$plum6",
+  },
+})
+
+export const ScreenShareTheme = theme("streaming", {
+  fontSizes: {
+    halfScreen: "75%",
+    clientSize: "200%",
   },
 })
 
@@ -83,5 +88,6 @@ export const globalStyles = global({
     boxSizing: "border-box",
     backgroundColor: "$plum1",
     color: "$plum12",
+    fontFamily: "Circular-Book",
   },
 })

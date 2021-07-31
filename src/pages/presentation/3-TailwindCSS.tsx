@@ -12,7 +12,9 @@ export default function PresentationPage(): JSX.Element {
       <Text as="h2">
         Example of UI{nbsp}Design{nbsp}System: Tailwind{nbsp}CSS
       </Text>
-      <main></main>
+      <main>
+        <img src="/tailwind.png" style={{ width: "70vw", outline: "medium solid black" }} />
+      </main>
     </Slide>
   )
 }

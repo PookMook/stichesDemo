@@ -6,16 +6,14 @@ export default function PresentationPage(): JSX.Element {
   const variants = useNavigation({
     right: "/presentation/7-Basics",
     left: "/presentation/5-Stitches",
-    down: "/presentation/6-2",
+    up: "/presentation/6-Caveats",
+    down: "/presentation/6-Caveats",
   })
   return (
     <Slide {...variants}>
-      <Text as="h2">Caveats</Text>
-      <ul>
-        <Text as="li">Beta library, v1 releases soon</Text>
-        <Text as="li">Unopinionated</Text>
-        <Text as="li">Very small install base</Text>
-      </ul>
+      <div className="vertical" />
+      <Text as="h2">Installation base</Text>
+      <img src="/npmtrends.png" style={{ width: "70vw", outline: "medium solid black" }} />
     </Slide>
   )
 }

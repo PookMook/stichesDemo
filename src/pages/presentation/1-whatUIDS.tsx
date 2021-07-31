@@ -7,7 +7,7 @@ export default function PresentationPage(): JSX.Element {
   return (
     <Slide {...variants}>
       <Text as="h2">
-        Before{nbsp}we{nbsp}start, what&apos;s a UI{nbsp}Design{nbsp}System?
+        Before{nbsp}we{nbsp}start, what is a UI{nbsp}Design{nbsp}System?
       </Text>
       <ul>
         <Text as="li">UI portion of a Design System (way broader subject)</Text>

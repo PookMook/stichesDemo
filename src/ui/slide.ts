@@ -5,7 +5,10 @@ export const Slide = styled("article", {
   height: "100vh",
   width: "100vw",
   display: "grid",
-  padding: "$large",
+  paddingLeft: theme.sizes.largeExtra,
+  paddingRight: theme.sizes.largeExtra,
+  paddingBottom: theme.sizes.large,
+  paddingTop: theme.sizes.large,
   placeItems: "center",
   variants: {
     Disposition: {

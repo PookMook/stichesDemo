@@ -1,4 +1,5 @@
 import { useSetTheme } from "hooks/useSetTheme"
+import "css/fonts.css"
 import type { AppProps } from "next/app"
 import { ReactElement } from "react"
 import { QueryClient, QueryClientProvider } from "react-query"

@@ -9,11 +9,12 @@ export default function PresentationPage(): JSX.Element {
   })
   return (
     <Slide {...variants}>
-      <Text as="h2">Template</Text>
+      <Text as="h2">Stitches</Text>
       <ul>
-        <Text as="li"></Text>
-        <Text as="li">Hard to maintain / upgrade</Text>
-        <Text as="li">Often ends up inconsistent over large codebases</Text>
+        <Text as="li">CSS-in-JS</Text>
+        <Text as="li">Near-zero runtime</Text>
+        <Text as="li">SSR</Text>
+        <Text as="li">Variants as first class citizen</Text>
       </ul>
     </Slide>
   )

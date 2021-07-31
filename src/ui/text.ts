@@ -4,16 +4,18 @@ export const Text = styled("p", {
   margin: 0,
   color: theme.colors.primary,
   "h1&": {
-    fontWeight: "bold",
+    fontWeight: "normal",
+    fontFamily: "$black",
     fontSize: "$title",
     textAlign: "center",
-    color: "$plum10",
+    color: "$plum12",
   },
   "h2&": {
-    fontWeight: "bold",
+    fontWeight: "normal",
+    fontFamily: "$medium",
     fontSize: "$largeExtra",
     textAlign: "center",
-    color: "$plum11",
+    color: "$plum12",
   },
   "li&": {
     "&:not(last-child)": {
